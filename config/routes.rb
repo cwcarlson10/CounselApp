@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+  devise_for :users, :controllers => { registrations: 'registrations' }
   get 'static/about', to: 'static#about', as: :about
+
+
 
   root 'static#home'
   resources :posts
