@@ -1,8 +1,9 @@
-<h1>Post</h1>
+<h1 class="text-center">Post</h1>
 
-<ul>
-  <li><%= @post.title %></li>
-  <li><%= @post.author %></li>
-  <li><%= @post.body %></li>
-  <li><%= link_to 'Back', posts_path %></li>
-</ul>
+<div class="panel">
+  <h3><%= @post.title %></h3>
+  <p><%= @post.body %></p>
+  <p><%= @post.author %></p>
+  <%= link_to 'Back', posts_path, class: 'button small success' %>
+  <%= link_to 'Edit', edit_post_path(@post.id), class: 'button small success' %>
+</div>

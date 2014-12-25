@@ -25,8 +25,8 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.update_attributes(@post.id)
-      redirect_to posts_path
+    if @post.update_attributes(post_params)
+      redirect_to post_path(@post.id)
     else
       render :edit
     end

@@ -1,6 +1,6 @@
 <%= simple_form_for @post do |f| %>
   <%= f.input :title %>
-  <%= f.input :author %>
-  <%= f.input :body %>
+  <%= f.input :body, label: "Post"%>
   <%= f.button :submit %>
 <% end %>
+<%= link_to 'Cancel', posts_path, class: 'button success' %>
